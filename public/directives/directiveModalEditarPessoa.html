@@ -1,0 +1,106 @@
+<div class="modal-editar-pessoa">
+	<script type="text/ng-template" id="idModalEditarPessoa"/>
+        <div class="modal-header">
+		    <div class="pull-right">
+                <button type="button" ng-click="fechar()" class="close">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+                </button>
+		    </div>
+            <h4>Editar Pessoa</h4>
+		</div>
+
+		<div class="modal-body">
+            <div class="row">
+				<div class="col-md-12">
+					<form novalidate name="editarPessoaForm" class="form-horizontal">
+
+						<!-- Text input-->
+						<div class="form-group">
+							<label class="col-md-6 control-label" for="cpf">*CPF</label>
+								<div style="margin-bottom: 10px;"class="col-md-6">
+									<input disabled id="textCpf" name="textCpf" type="number"
+											ng-model="pessoa.cpf"
+											placeholder="Insira o Cpf"
+											class="form-control input-md" required />
+		
+									<div class="text-left" ng-show="adicionarPessoaForm.textCpf.$touched && 
+											adicionarPessoaForm.textCpf.$error.required">
+										<span class="fa fa-times campo-req"><b><i>Campo Cpf Obrigatório.</i></b></span>
+									</div>
+								</div>
+									
+									
+							<label class="col-md-6 control-label" for="nome">*Nome</label>
+								<div style="margin-bottom: 10px;"class="col-md-6">
+									<input id="textNome" name="textNome" type="text"
+											ng-model="pessoa.nome"
+											placeholder="Insira o nome"
+											class="form-control input-md" required />
+		
+									<div class="text-left" ng-show="adicionarPessoaForm.textNome.$touched && 
+											adicionarPessoaForm.textNome.$error.required">
+										<span class="fa fa-times campo-req"><b><i>Campo Nome obrigatório.</i></b></span>
+									</div>
+								</div>
+								
+							<label class="col-md-6 control-label" for="nome">Nascimento:</label>
+								<div style="margin-bottom: 10px;"class="col-md-2">
+									<input id="textDia" name="textDia" type="number"
+											ng-model="pessoa.dia"
+											placeholder="dia"
+											class="form-control input-md" />
+								</div>
+								
+								<div style="margin-bottom: 10px;"class="col-md-2">
+									<input id="textMes" name="textMes" type="number"
+											ng-model="pessoa.mes"
+											placeholder="mes"
+											class="form-control input-md" />
+								</div>
+								
+								
+								<div style="margin-bottom: 10px;"class="col-md-2">
+									<input id="textAno" name="textMes" type="number"
+											ng-model="pessoa.ano"
+											placeholder="ano"
+											class="form-control input-md" />
+								</div>
+								
+							
+							<label class="col-md-6 control-label" for="nome">Peso:</label>
+								<div style="margin-bottom: 10px;"class="col-md-6">
+									<input id="textPeso" name="textPeso" type="number"
+											ng-model="pessoa.peso"
+											placeholder="peso"
+											class="form-control input-md" />
+								</div>
+								
+								
+									<label class="col-md-6 control-label" for="textinputArea">UF</label>
+									<div style="margin-bottom: 10px;"class="col-md-6">
+										
+	                    				<select class="form-control select-md" ng-model="pessoa.uf"> 	 
+	                    					<option value="" disabled >Selecione UF</option>
+	                    					<option ng-repeat="geoname in ufList.geonames" value="{{geoname.name}}">{{geoname.name}}</option>
+	                    				</select>
+									</div>
+						</div>
+
+						<button id="singlebutton" name="singlebutton"
+							class="btn btn-primary" ng-disabled="editarPessoaForm.$invalid"
+							ng-click="editarPessoa()">Editar</button>
+							
+				   </form>
+				</div>
+            </div>
+        </div>
+                    
+
+
+		<div class="modal-footer">
+            <button type="button" ng-click="fechar()" class="btn btn-danger">
+            	Fechar
+        	</button>
+        </div>
+	</script>
+</div>

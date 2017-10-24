@@ -1,0 +1,26 @@
+
+<div>
+	<script type="text/ng-template" id="idAlertaDeletarPessoa"/>
+        <div class="modal-header header-red text-center">
+		    <div class="pull-right">
+                <button type="button" ng-click="fechar()" class="close" title="Fechar">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+                </button>
+		    </div>
+            <div class="text-center">
+				<h4>Deseja realmente deletar essa pessoa?</h4>
+            </div>
+		</div>
+
+		<div class="modal-footer footer-center">
+            <button class="btn btn-danger btn-width" ng-click="fechar()" >
+                Não
+            </button>
+            <button class="btn btn-success btn-width" ng-click="deletarPessoa()" >
+                Sim
+            </button>
+        </div>
+	</script>
+</div>
+
+

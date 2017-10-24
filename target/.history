@@ -1,0 +1,61 @@
+eclipse with-source=true
+compile
+exit
+compile
+eclipse with-source=true
+compile
+clean
+compile
+clean
+exit
+compile
+run
+eclipse with-source=true
+run
+eclipse with-source=true
+compile
+eclipse with-source=true
+run
+eclipse with-source=true
+run
+clean
+clean-files
+compile
+run
+clean
+clean-files
+compile
+run
+clean
+clean-files
+compile
+run
+clean
+clean-files
+compile
+run
+eclipse with-source=true
+compile
+clean
+clean-files
+run
+compile
+run
+clean-files
+clean
+run
+eclipse with-source=true
+clean
+clean-files
+compile
+run
+eclipse with-source=true
+clean
+clean-files
+compile
+run
+clean
+clen-files
+clean-files
+compile
+run

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="default"
+		module="cadastro_pessoas-build"
+		revision="0.1-SNAPSHOT"
+		status="integration"
+		publication="20171022124056"
+		e:sbtVersion="0.13" e:scalaVersion="2.10"
+	>
+		<description>
+		cadastro_pessoas-build
+		</description>
+	</info>
+	<configurations>
+		<conf name="compile" visibility="public" description=""/>
+		<conf name="runtime" visibility="public" description="" extends="compile"/>
+		<conf name="test" visibility="public" description="" extends="runtime"/>
+		<conf name="provided" visibility="public" description=""/>
+		<conf name="optional" visibility="public" description=""/>
+		<conf name="compile-internal" visibility="private" description="" extends="compile,optional,provided"/>
+		<conf name="runtime-internal" visibility="private" description="" extends="runtime,optional"/>
+		<conf name="test-internal" visibility="private" description="" extends="test,optional,provided"/>
+		<conf name="plugin" visibility="private" description=""/>
+		<conf name="sources" visibility="public" description=""/>
+		<conf name="docs" visibility="public" description=""/>
+		<conf name="pom" visibility="public" description=""/>
+		<conf name="scala-tool" visibility="private" description=""/>
+	</configurations>
+	<publications>
+		<artifact name="cadastro_pessoas-build" type="pom" ext="pom" conf="pom"/>
+		<artifact name="cadastro_pessoas-build" type="jar" ext="jar" conf="compile"/>
+		<artifact name="cadastro_pessoas-build" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		<artifact name="cadastro_pessoas-build" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+	</publications>
+	<dependencies>
+		<dependency org="org.scala-lang" name="scala-compiler" rev="2.10.6" conf="scala-tool->default,optional(default)"/>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.10.6" conf="scala-tool->default,optional(default);provided->default(compile)"/>
+		<dependency org="org.scala-sbt" name="sbt" rev="0.13.11" conf="provided->default(compile)"/>
+		<dependency org="com.typesafe.play" name="sbt-plugin" rev="2.3.7" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10">
+			<artifact name="sbt-plugin" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="sbt-plugin" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+			<artifact name="sbt-plugin" type="jar" ext="jar" conf="*"/>
+		</dependency>
+		<dependency org="com.typesafe.sbt" name="sbt-coffeescript" rev="1.0.0" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10">
+			<artifact name="sbt-coffeescript" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="sbt-coffeescript" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+			<artifact name="sbt-coffeescript" type="jar" ext="jar" conf="*"/>
+		</dependency>
+		<dependency org="com.typesafe.sbt" name="sbt-less" rev="1.0.0" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10">
+			<artifact name="sbt-less" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="sbt-less" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+			<artifact name="sbt-less" type="jar" ext="jar" conf="*"/>
+		</dependency>
+		<dependency org="com.typesafe.sbt" name="sbt-jshint" rev="1.0.1" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10">
+			<artifact name="sbt-jshint" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="sbt-jshint" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+			<artifact name="sbt-jshint" type="jar" ext="jar" conf="*"/>
+		</dependency>
+		<dependency org="com.typesafe.sbt" name="sbt-rjs" rev="1.0.1" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10">
+			<artifact name="sbt-rjs" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="sbt-rjs" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+			<artifact name="sbt-rjs" type="jar" ext="jar" conf="*"/>
+		</dependency>
+		<dependency org="com.typesafe.sbt" name="sbt-digest" rev="1.0.0" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10">
+			<artifact name="sbt-digest" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="sbt-digest" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+			<artifact name="sbt-digest" type="jar" ext="jar" conf="*"/>
+		</dependency>
+		<dependency org="com.typesafe.sbt" name="sbt-mocha" rev="1.0.0" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10">
+			<artifact name="sbt-mocha" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="sbt-mocha" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+			<artifact name="sbt-mocha" type="jar" ext="jar" conf="*"/>
+		</dependency>
+		<override org="org.scala-lang" module="scala-library" matcher="exact" rev="2.10.6"/>
+		<override org="org.scala-lang" module="scala-compiler" matcher="exact" rev="2.10.6"/>
+		<override org="org.scala-lang" module="scala-reflect" matcher="exact" rev="2.10.6"/>
+	</dependencies>
+</ivy-module>

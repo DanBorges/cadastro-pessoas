@@ -1,0 +1,31 @@
+{
+  "name": "cadastro_pessoas",
+  "version": "1.0.0",
+  "description": "This is your new Play application =================================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/cimtech/cadastro_pessoas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-install": "^1.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.1"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/cimtech/cadastro_pessoas/issues"
+  },
+  "homepage": "https://gitlab.com/cimtech/cadastro_pessoas#README",
+  "dependencies": {
+    "gulp-install": "^1.1.0",
+    "zone.js": "^0.7.4"
+  }
+}

@@ -1,0 +1,5 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/home/daniel/Documentos/cadastro_pessoas/conf/cadastropessoas.properties,/home/daniel/Documentos/cadastro_pessoas/target/scala-2.11/classes/cadastropessoas.properties)[0m
+[0m[[0mdebug[0m] [0m	(/home/daniel/Documentos/cadastro_pessoas/conf/routes,/home/daniel/Documentos/cadastro_pessoas/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/home/daniel/Documentos/cadastro_pessoas/conf/application.conf,/home/daniel/Documentos/cadastro_pessoas/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/daniel/Documentos/cadastro_pessoas/conf/logback.xml,/home/daniel/Documentos/cadastro_pessoas/target/scala-2.11/classes/logback.xml)[0m
