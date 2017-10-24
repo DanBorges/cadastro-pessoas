@@ -203,13 +203,10 @@ var modalControlerEditarPessoa = function ($scope, $modalInstance, $http, $timeo
 		
 	$scope.pessoa = pessoaParametro;
 	
-	
 	$scope.editarPessoa = function() {
 		uf = $scope.pessoa.uf;
 		pessoa.uf = uf;
-		
 		$http.post('/pessoaController/editarPessoa', $scope.pessoa).then(function(response) {
-			
 			$modalInstance.close(response);
 		});
 	};

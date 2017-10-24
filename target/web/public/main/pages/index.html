@@ -38,6 +38,7 @@
 		                            <tr>
 		                                <th>CPF</th>
 		                                <th>Nome</th>
+		                                <th>Nascimento</th>
 		                                <th>Peso</th>
 		                                <th>UF</th>
 		                                <th>Ações</th>
@@ -45,6 +46,7 @@
 		                            <tr ng-repeat="pessoa in pessoaList | filter:searchBox">
 		                                <td>{{pessoa.cpf}}</td>
 		                                <td>{{pessoa.nome}}</td>
+		                                <td>{{pessoa.dia}}/{{pessoa.mes}}/{{pessoa.ano}}</td>
 		                                <td>{{pessoa.peso}}Kg</td>
 		                                <td>{{pessoa.uf}}</td>
 		                                <td>
