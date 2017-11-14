@@ -16,5 +16,3 @@ GET	 /pessoaController/findAllPessoas														controllers.PessoaController.
 POST /pessoaController/cadastrarPessoa														controllers.PessoaController.cadastrarPessoa()
 GET	 /pessoaController/deletarPessoa/:cpf													controllers.PessoaController.deletarPessoa(cpf: Long)
 POST /pessoaController/editarPessoa															controllers.PessoaController.editarPessoa()
-
-GET /pessoaController/findPessoasByCPF/:cpf														controllers.PessoaController.findPessoasByCPF(cpf:Long)
