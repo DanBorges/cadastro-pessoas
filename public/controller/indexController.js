@@ -39,8 +39,6 @@ moduleIndexVar.controller('indexController', ['$rootScope', '$scope', '$http', '
             size: 'md',
         });
 		
-		
-
 		modalInstance.result.then(function (response) {
 			
 			$scope.alertaSistemaTemplate.message = response.data.message;
@@ -48,10 +46,7 @@ moduleIndexVar.controller('indexController', ['$rootScope', '$scope', '$http', '
         	$scope.alertaSistemaTemplate.show = true;
         	$scope.alertaSistemaTemplate.icon = response.data.icon;
 			$timeout(function() { $scope.alertaSistemaTemplate.show = false; }, 5000);
-			
-
 			findTabelaPessoas();
-			
 			
 		}, function (parametro) {
 	    });
@@ -59,12 +54,10 @@ moduleIndexVar.controller('indexController', ['$rootScope', '$scope', '$http', '
 	
 	
 	$scope.abrirModalEditarPessoa = function(pessoa) {
-		
 		var modalInstance = $modal.open({
             templateUrl: 'idModalEditarPessoa',
             controller: modalControlerEditarPessoa,
             size: 'md',
-	       
             resolve: {
 	        	pessoaParametro: function () {
 	        		return pessoa;
@@ -73,32 +66,20 @@ moduleIndexVar.controller('indexController', ['$rootScope', '$scope', '$http', '
 	    });
 
 
-		
 		modalInstance.result.then(function (response) {
-			
-			
 			$scope.alertaSistemaTemplate.message = response.data.message;
         	$scope.alertaSistemaTemplate.type = response.data.type;
         	$scope.alertaSistemaTemplate.show = true;
         	$scope.alertaSistemaTemplate.icon = response.data.icon;
 			$timeout(function() { $scope.alertaSistemaTemplate.show = false; }, 5000)
-			
-
 			findTabelaPessoas();
-			
-			
 		},function (parametro) {
 	    });
-		
-		
 	};
 
 	
-	
 	$scope.abrirModalDelatarPessoa = function(cpf) {
-		
 		console.log(cpf+"teste");
-
 		var modalInstance = $modal.open({
             templateUrl: 'idAlertaDeletarPessoa',
             controller: modalControlerDeletarPessoa,
@@ -111,37 +92,23 @@ moduleIndexVar.controller('indexController', ['$rootScope', '$scope', '$http', '
 
             }
         });
-		
 		modalInstance.result.then(function (response) {
-			
 			$scope.alertaSistemaTemplate.message = response.data.message;
         	$scope.alertaSistemaTemplate.type = response.data.type;
         	$scope.alertaSistemaTemplate.show = true;
         	$scope.alertaSistemaTemplate.icon = response.data.icon;
 			$timeout(function() { $scope.alertaSistemaTemplate.show = false; }, 5000);
-			
-
 			findTabelaPessoas();
-			
-			
 		},function (parametro) {
 	    });
-		
 	};
-
-
-	
-
 }]);
 
 
 
 
 var modalControlerAdicionarPessoa = function ($scope, $modalInstance, $http, $timeout, $sce) {
-
-
 	$scope.ufList = [];
-
 	$http.get('http://www.geonames.org/childrenJSON?geonameId=3469034')
 	.success(function(responseData) {
 		$scope.ufList = responseData;
@@ -149,9 +116,7 @@ var modalControlerAdicionarPessoa = function ($scope, $modalInstance, $http, $ti
 	});
 	
 	var objPessoa = {};
-	
 	$scope.adicionarPessoa = function(){
-
 		cpf = $scope.cpf;
 		nome = $scope.nome;
 		dia = $scope.dia;
@@ -167,16 +132,12 @@ var modalControlerAdicionarPessoa = function ($scope, $modalInstance, $http, $ti
 		objPessoa.ano = ano;
 		objPessoa.peso = peso;
 		objPessoa.uf = uf;
-
 		console.log(objPessoa);
-		
-		
 		$http.post('/pessoaController/cadastrarPessoa',
 				objPessoa).then(function(response) {
 					$modalInstance.close(response);
 		});
 	}
-	
 	$scope.fechar = function() {
 		$modalInstance.dismiss();
 	};
@@ -185,24 +146,19 @@ var modalControlerAdicionarPessoa = function ($scope, $modalInstance, $http, $ti
 
 var modalControlerEditarPessoa = function ($scope, $modalInstance, $http, $timeout, $sce, pessoaParametro) {
 	$scope.ufList = [];
-
 	$http.get('http://www.geonames.org/childrenJSON?geonameId=3469034')
 	.success(function(responseData) {
 		$scope.ufList = responseData;
 		console.log ($scope.ufList);
 	});
-	
 	
 	$scope.pessoa = {};
-	
 	$http.get('http://www.geonames.org/childrenJSON?geonameId=3469034')
 	.success(function(responseData) {
 		$scope.ufList = responseData;
 		console.log ($scope.ufList);
 	});
-		
 	$scope.pessoa = pessoaParametro;
-	
 	$scope.editarPessoa = function() {
 		uf = $scope.pessoa.uf;
 		pessoa.uf = uf;
@@ -211,12 +167,10 @@ var modalControlerEditarPessoa = function ($scope, $modalInstance, $http, $timeo
 		});
 	};
 
-
 	$scope.fechar = function() {
 		$modalInstance.dismiss();
 	};
 };
-
 
 var modalControlerDeletarPessoa = function ($scope, $modalInstance, $http, $timeout, $sce, cpfParametro) {
 	$scope.deletarPessoa = function(){
