@@ -1,5 +1,8 @@
 [0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(/home/daniel/Documentos/cadastro_pessoas/conf/cadastropessoas.properties,/home/daniel/Documentos/cadastro_pessoas/target/scala-2.11/classes/cadastropessoas.properties)[0m
-[0m[[0mdebug[0m] [0m	(/home/daniel/Documentos/cadastro_pessoas/conf/routes,/home/daniel/Documentos/cadastro_pessoas/target/scala-2.11/classes/routes)[0m
-[0m[[0mdebug[0m] [0m	(/home/daniel/Documentos/cadastro_pessoas/conf/application.conf,/home/daniel/Documentos/cadastro_pessoas/target/scala-2.11/classes/application.conf)[0m
-[0m[[0mdebug[0m] [0m	(/home/daniel/Documentos/cadastro_pessoas/conf/logback.xml,/home/daniel/Documentos/cadastro_pessoas/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/home/daniel/eclipse-workspace/cadastro-pessoas/conf/application.conf,/home/daniel/eclipse-workspace/cadastro-pessoas/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/daniel/eclipse-workspace/cadastro-pessoas/conf/routes,/home/daniel/eclipse-workspace/cadastro-pessoas/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/home/daniel/eclipse-workspace/cadastro-pessoas/conf/logback.xml,/home/daniel/eclipse-workspace/cadastro-pessoas/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/home/daniel/eclipse-workspace/cadastro-pessoas/conf/evolutions,/home/daniel/eclipse-workspace/cadastro-pessoas/target/scala-2.11/classes/evolutions)[0m
+[0m[[0mdebug[0m] [0m	(/home/daniel/eclipse-workspace/cadastro-pessoas/conf/cadastropessoas.properties,/home/daniel/eclipse-workspace/cadastro-pessoas/target/scala-2.11/classes/cadastropessoas.properties)[0m
+[0m[[0mdebug[0m] [0m	(/home/daniel/eclipse-workspace/cadastro-pessoas/conf/evolutions/default,/home/daniel/eclipse-workspace/cadastro-pessoas/target/scala-2.11/classes/evolutions/default)[0m
+[0m[[0mdebug[0m] [0m	(/home/daniel/eclipse-workspace/cadastro-pessoas/conf/evolutions/default/1.sql,/home/daniel/eclipse-workspace/cadastro-pessoas/target/scala-2.11/classes/evolutions/default/1.sql)[0m

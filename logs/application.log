@@ -1,9 +1,9 @@
-2017-10-24 09:21:29,845 - [INFO] - from play in pool-4-thread-7 
+2017-11-21 16:28:51,045 - [INFO] - from play in pool-4-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2017-10-24 09:22:56,390 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://127.0.0.1:3306/cadastro
+2017-11-21 16:30:31,041 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:postgresql://localhost/treinamento-gt4w
 
-2017-10-24 09:23:35,584 - [INFO] - from play in play-internal-execution-context-1 
+2017-11-21 16:30:32,968 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 

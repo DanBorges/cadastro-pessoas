@@ -1,6 +1,6 @@
-// @SOURCE:/home/daniel/Documentos/cadastro_pessoas/conf/routes
-// @HASH:19eba8b6e6eb30c1d4839f556174877ac4ec2cbb
-// @DATE:Mon Oct 23 19:12:22 BRST 2017
+// @SOURCE:/home/daniel/eclipse-workspace/cadastro-pessoas/conf/routes
+// @HASH:12a1e912cc9f28e75b85d287b73445342aad42b2
+// @DATE:Tue Nov 21 15:07:02 BRST 2017
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,7 +15,6 @@ import _root_.play.libs.F
 import Router.queryString
 
 
-// @LINE:20
 // @LINE:18
 // @LINE:17
 // @LINE:16
@@ -49,7 +48,6 @@ def versioned(file:Asset): Call = {
 }
                           
 
-// @LINE:20
 // @LINE:18
 // @LINE:17
 // @LINE:16
@@ -88,13 +86,6 @@ def deletarPessoa(cpf:Long): Call = {
 }
                         
 
-// @LINE:20
-def findPessoasByCPF(cpf:Long): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "pessoaController/findPessoasByCPF/" + implicitly[PathBindable[Long]].unbind("cpf", cpf))
-}
-                        
-
 // @LINE:12
 // @LINE:11
 // @LINE:10
@@ -115,7 +106,6 @@ case ()  =>
                   
 
 
-// @LINE:20
 // @LINE:18
 // @LINE:17
 // @LINE:16
@@ -158,7 +148,6 @@ def versioned : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:20
 // @LINE:18
 // @LINE:17
 // @LINE:16
@@ -213,17 +202,6 @@ def deletarPessoa : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:20
-def findPessoasByCPF : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.PessoaController.findPessoasByCPF",
-   """
-      function(cpf) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "pessoaController/findPessoasByCPF/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("cpf", cpf)})
-      }
-   """
-)
-                        
-
 // @LINE:12
 // @LINE:11
 // @LINE:10
@@ -251,7 +229,6 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:20
 // @LINE:18
 // @LINE:17
 // @LINE:16
@@ -284,7 +261,6 @@ def versioned(path:String, file:Asset): play.api.mvc.HandlerRef[_] = new play.ap
 }
                           
 
-// @LINE:20
 // @LINE:18
 // @LINE:17
 // @LINE:16
@@ -316,12 +292,6 @@ def editarPessoa(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 // @LINE:17
 def deletarPessoa(cpf:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.PessoaController.deletarPessoa(cpf), HandlerDef(this.getClass.getClassLoader, "", "controllers.PessoaController", "deletarPessoa", Seq(classOf[Long]), "GET", """""", _prefix + """pessoaController/deletarPessoa/$cpf<[^/]+>""")
-)
-                      
-
-// @LINE:20
-def findPessoasByCPF(cpf:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.PessoaController.findPessoasByCPF(cpf), HandlerDef(this.getClass.getClassLoader, "", "controllers.PessoaController", "findPessoasByCPF", Seq(classOf[Long]), "GET", """""", _prefix + """pessoaController/findPessoasByCPF/$cpf<[^/]+>""")
 )
                       
 

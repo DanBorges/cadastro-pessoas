@@ -59,3 +59,58 @@ clen-files
 clean-files
 compile
 run
+eclipse with-source=true
+clear
+eclipse with-source=true
+clean
+eclipse with-source=true
+clean
+clean-files
+compile
+run
+eclipse with-source=true
+clea
+clean
+compile
+run
+dependencies
+eclipse with-source=true
+compile
+run
+dependencies
+clean
+clean-files
+eclipse with-source=true
+compile
+run
+compile
+run
+clean
+clean-files
+compile
+run
+clean
+clean-files
+compile
+run
+clean
+clean-files
+compile
+eclipse with-source=true
+run
+dependencies
+eclipse with-source=true
+run
+dependencies
+eclipse with-source=true
+compile
+run
+compile
+run
+clean
+dependencie
+clear
+dependencies
+eclipse with-source=true
+compile
+run

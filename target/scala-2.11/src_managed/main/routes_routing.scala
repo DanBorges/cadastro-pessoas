@@ -1,6 +1,6 @@
-// @SOURCE:/home/daniel/Documentos/cadastro_pessoas/conf/routes
-// @HASH:19eba8b6e6eb30c1d4839f556174877ac4ec2cbb
-// @DATE:Mon Oct 23 19:12:22 BRST 2017
+// @SOURCE:/home/daniel/eclipse-workspace/cadastro-pessoas/conf/routes
+// @HASH:12a1e912cc9f28e75b85d287b73445342aad42b2
+// @DATE:Tue Nov 21 15:07:02 BRST 2017
 
 
 import play.core._
@@ -94,14 +94,7 @@ private[this] lazy val controllers_PessoaController_editarPessoa8_invoker = crea
 controllers.PessoaController.editarPessoa(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.PessoaController", "editarPessoa", Nil,"POST", """""", Routes.prefix + """pessoaController/editarPessoa"""))
         
-
-// @LINE:20
-private[this] lazy val controllers_PessoaController_findPessoasByCPF9_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("pessoaController/findPessoasByCPF/"),DynamicPart("cpf", """[^/]+""",true))))
-private[this] lazy val controllers_PessoaController_findPessoasByCPF9_invoker = createInvoker(
-controllers.PessoaController.findPessoasByCPF(fakeValue[Long]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.PessoaController", "findPessoasByCPF", Seq(classOf[Long]),"GET", """""", Routes.prefix + """pessoaController/findPessoasByCPF/$cpf<[^/]+>"""))
-        
-def documentation = List(("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.versioned(path:String = "/public", file:Asset)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix,"""controllers.PessoaController.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cadastropessoas""","""controllers.PessoaController.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cadastropessoas/""","""controllers.PessoaController.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """pessoaController/findAllPessoas""","""controllers.PessoaController.findAllPessoas()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """pessoaController/cadastrarPessoa""","""controllers.PessoaController.cadastrarPessoa()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """pessoaController/deletarPessoa/$cpf<[^/]+>""","""controllers.PessoaController.deletarPessoa(cpf:Long)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """pessoaController/editarPessoa""","""controllers.PessoaController.editarPessoa()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """pessoaController/findPessoasByCPF/$cpf<[^/]+>""","""controllers.PessoaController.findPessoasByCPF(cpf:Long)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.versioned(path:String = "/public", file:Asset)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix,"""controllers.PessoaController.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cadastropessoas""","""controllers.PessoaController.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cadastropessoas/""","""controllers.PessoaController.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """pessoaController/findAllPessoas""","""controllers.PessoaController.findAllPessoas()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """pessoaController/cadastrarPessoa""","""controllers.PessoaController.cadastrarPessoa()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """pessoaController/deletarPessoa/$cpf<[^/]+>""","""controllers.PessoaController.deletarPessoa(cpf:Long)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """pessoaController/editarPessoa""","""controllers.PessoaController.editarPessoa()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -177,14 +170,6 @@ case controllers_PessoaController_deletarPessoa7_route(params) => {
 case controllers_PessoaController_editarPessoa8_route(params) => {
    call { 
         controllers_PessoaController_editarPessoa8_invoker.call(controllers.PessoaController.editarPessoa())
-   }
-}
-        
-
-// @LINE:20
-case controllers_PessoaController_findPessoasByCPF9_route(params) => {
-   call(params.fromPath[Long]("cpf", None)) { (cpf) =>
-        controllers_PessoaController_findPessoasByCPF9_invoker.call(controllers.PessoaController.findPessoasByCPF(cpf))
    }
 }
         
